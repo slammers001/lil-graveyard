@@ -183,6 +183,127 @@ OR
 
 ---
 
+## 📊 Metrics & Insights
+
+Project Graveyard provides data-driven insights to help users understand their project habits and improve completion rates.
+
+---
+
+### 🔥 Core Metrics
+
+#### Main Cause of Death
+- The most common reason projects are abandoned
+- Displayed with percentage breakdown
+
+Example:
+> Lost Interest (42%)
+
+---
+
+#### Average Project Lifespan
+- Average time between project start and last activity
+- Helps identify how long projects typically last
+
+---
+
+#### Abandonment Rate
+- Percentage of projects marked as abandoned
+
+Formula: abandoned/total projects * 100
+
+---
+
+#### Active vs Abandoned Ratio
+- Visual comparison of active, paused, and abandoned projects
+
+---
+
+### 🧠 Behavioral Insights
+
+#### Drop-off Point
+- Identifies when users most often abandon projects
+
+Example:
+> Most projects are abandoned after 2–3 days
+
+---
+
+#### Failure Stage
+- Determines the stage where projects typically fail:
+  - Planning
+  - Setup
+  - Core Development
+  - Polishing
+
+---
+
+#### Most Problematic Category
+- Identifies which project tags/categories are most frequently abandoned
+
+Example:
+> "AI" projects have the highest abandonment rate
+
+---
+
+### ⏱️ Time-Based Metrics
+
+#### Projects Started Per Time Period
+- Number of projects started per week/month
+
+---
+
+#### Projects Completed Per Time Period
+- Tracks completion trends over time
+
+---
+
+#### Longest Surviving Project
+- Project with the longest active duration
+
+---
+
+#### Fastest Abandoned Project
+- Project with the shortest lifespan
+
+---
+
+### 🔁 Recovery Metrics
+
+#### Revival Rate
+- Percentage of abandoned projects that are revisited
+
+---
+
+#### Successful Revivals
+- Projects that transitioned from abandoned back to active and received updates
+
+---
+
+#### Average Steps to Restart
+- Average number of logged actions after revival
+
+---
+
+### 😏 Optional Insight Messages
+
+Lightweight, personality-driven insights based on user behavior:
+
+- "You start more projects than you finish"
+- "Most of your activity happens on day one"
+- "You tend to abandon projects early in development"
+
+
+---
+
+### 🧱 Data Considerations
+
+- Track cause_of_death as an enum or categorized string
+- Store timestamps for:
+  - project creation
+  - last activity
+  - status changes
+- Aggregate metrics periodically or compute on demand
+
 ## 📊 Data Model (Simplified)
 
 ### Project
