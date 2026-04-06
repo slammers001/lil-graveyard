@@ -1,6 +1,6 @@
 # 🪦 Lil' Graveyard
 
-A brutally honest app for tracking abandoned projects, understanding why they failed, and helping revive them with realistic next steps.
+A simple tool to track abandoned projects, uncover why they didn’t work out, and help you restart them with practical next steps.
 
 ---
 
