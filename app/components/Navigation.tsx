@@ -37,12 +37,12 @@ export default function Navigation() {
                 </Link>
               ))}
             </div>
-          </div>
-          
-          <div className="flex items-center space-x-4">
-            <button className="bg-cyan-600 hover:bg-cyan-700 text-white px-4 py-2 rounded-md text-sm font-medium transition-colors border border-cyan-500 shadow-lg shadow-cyan-600/25">
-              + Add Project
-            </button>
+            
+            <div className="flex items-center space-x-4">
+              <button className="bg-cyan-600 hover:bg-cyan-700 text-white px-4 py-2 rounded-md text-sm font-medium transition-colors border border-cyan-500 shadow-lg shadow-cyan-600/25">
+                Dig New Grave
+              </button>
+            </div>
           </div>
         </div>
       </div>

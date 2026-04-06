@@ -127,7 +127,7 @@ export default function ProjectsPage() {
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       <div className="mb-8">
         <h1 className="text-3xl font-bold text-cyan-400 mb-2">Projects</h1>
-        <p className="text-gray-400">Manage your project graveyard</p>
+        <p className="text-gray-400">The boneyard of broken dreams and abandoned code</p>
       </div>
 
       {/* Filters and Controls */}
@@ -255,8 +255,8 @@ export default function ProjectsPage() {
 
       {sortedProjects.length === 0 && (
         <div className="text-center py-12">
-          <p className="text-gray-500 text-lg">No projects found</p>
-          <p className="text-gray-600 text-sm mt-2">Try adjusting your filters or add your first project</p>
+          <p className="text-gray-500 text-lg mb-2">No projects found</p>
+          <p className="text-gray-600 text-sm mt-2">Your graveyard is suspiciously empty... for now.</p>
         </div>
       )}
     </div>

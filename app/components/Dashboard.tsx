@@ -69,7 +69,7 @@ export default function Dashboard({ stats, recentProjects }: DashboardProps) {
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       <div className="mb-8">
         <h1 className="text-3xl font-bold text-cyan-400 mb-2">Dashboard</h1>
-        <p className="text-gray-400">Track your project graveyard and uncover patterns</p>
+        <p className="text-gray-400">Welcome to your digital graveyard. Let's see what died this time.</p>
       </div>
 
       {/* Main Stats Grid */}
@@ -113,7 +113,10 @@ export default function Dashboard({ stats, recentProjects }: DashboardProps) {
         <h2 className="text-xl font-semibold text-cyan-400 mb-4">Recent Projects</h2>
         <div className="space-y-3">
           {recentProjects.length === 0 ? (
-            <p className="text-gray-500 text-center py-8">No projects yet. Start by adding your first project!</p>
+            <div className="text-center py-8">
+              <p className="text-gray-500 text-lg mb-2">No projects yet.</p>
+              <p className="text-gray-600 text-sm">Every graveyard starts empty. Time to add your first victim! 💀</p>
+            </div>
           ) : (
             recentProjects.map((project) => (
               <div
