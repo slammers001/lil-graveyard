@@ -134,76 +134,29 @@ export default function Graveyard({ projects, onGraveClick }: GraveyardProps) {
           <p className="text-gray-600">Every graveyard starts somewhere. Time to dig your first grave.</p>
         </div>
       ) : (
-        <div className="relative bg-gradient-to-b from-gray-900/30 to-gray-800/50 rounded-lg p-8 border border-gray-800 backdrop-blur-sm">
-          {/* Ground texture overlay */}
-          <div className="absolute inset-0 bg-gradient-to-t from-gray-900/50 to-transparent opacity-50 rounded-lg"></div>
-          
-          {/* Graves */}
-          <div className="relative grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-            {sortedProjects.map((project, index) => {
-              const graveStatus = getGraveStatus(project);
-              return (
-                <div
-                  key={project.id}
-                  className="relative group cursor-pointer transform transition-all duration-300 hover:scale-105"
-                  onClick={() => onGraveClick(project)}
-                  style={{ animationDelay: `${index * 0.1}s` }}
-                >
-                  {/* Grave stone */}
-                  <div className={`relative border-2 ${graveStatus.border} rounded-lg overflow-hidden shadow-lg ${graveStatus.glow} transition-all duration-300 hover:shadow-xl`}>
-                    <div className="relative h-48 bg-gradient-to-b from-gray-700 to-gray-800">
-                      <Image
-                        src="/grave.png"
-                        alt="Grave"
-                        fill
-                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                        className="object-cover opacity-80"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
-                      
-                      {/* Epitaph (Project Name) */}
-                      <div className="absolute bottom-0 left-0 right-0 p-4 text-center">
-                        <h3 className="text-white font-bold text-lg mb-1 drop-shadow-lg">
-                          {project.name}
-                        </h3>
-                        <p className="text-gray-300 text-sm italic drop-shadow">
-                          {project.status === ProjectStatus.ABANDONED ? 'RIP' : 
-                           project.status === ProjectStatus.PAUSED ? '...' : 'Still coding'}
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  {/* Hover info */}
-                  <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 bg-gray-900 border border-gray-700 rounded-lg px-3 py-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap z-10">
-                    <p className="text-xs text-gray-300">
-                      {project.description.length > 30 ? 
-                        project.description.substring(0, 30) + '...' : 
-                        project.description}
-                    </p>
-                  </div>
-                  
-                  {/* Dates on the grave */}
-                  <div className="absolute top-2 left-2 text-xs text-gray-400">
-                    <div>{formatDate(project.startDate)}</div>
-                    {project.status === ProjectStatus.ABANDONED && (
-                      <div className="text-red-400">-{formatDate(project.lastWorkedDate)}</div>
-                    )}
-                  </div>
-                  
-                  {/* Status indicator */}
-                  <div className="absolute top-2 right-2">
-                    <div className={`w-3 h-3 rounded-full ${
-                      project.status === ProjectStatus.ACTIVE ? 'bg-green-500 animate-pulse' :
-                      project.status === ProjectStatus.PAUSED ? 'bg-yellow-500' :
-                      'bg-gray-500'
-                    }`}></div>
-                  </div>
+        <div className="relative grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+          {sortedProjects.map((project, index) => {
+            const graveStatus = getGraveStatus(project);
+            return (
+              <div
+                key={project.id}
+                className="relative group cursor-pointer transform transition-all duration-300 hover:scale-105"
+                onClick={() => onGraveClick(project)}
+                style={{ animationDelay: `${index * 0.1}s` }}
+              >
+                {/* Grave stone */}
+                <div className={`relative h-48 transition-all duration-300 hover:scale-105 cursor-pointer ${graveStatus.glow}`}>
+                  <Image
+                    src="/grave.png"
+                    alt="Grave"
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    className="object-cover"
+                  />
                 </div>
-              );
-            })}
-          </div>
-          
+              </div>
+            );
+          })}
         </div>
       )}
     </div>
