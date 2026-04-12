@@ -204,11 +204,6 @@ export default function Graveyard({ projects, onGraveClick }: GraveyardProps) {
             })}
           </div>
           
-          {/* Ground decorations */}
-          <div className="absolute bottom-4 left-4 text-gray-600 text-4xl opacity-30">🌿</div>
-          <div className="absolute bottom-4 right-4 text-gray-600 text-4xl opacity-30">🌿</div>
-          <div className="absolute top-4 left-1/4 text-gray-600 text-2xl opacity-20">🦇</div>
-          <div className="absolute top-8 right-1/3 text-gray-600 text-3xl opacity-20">🌙</div>
         </div>
       )}
     </div>
