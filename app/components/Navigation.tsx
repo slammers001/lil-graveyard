@@ -8,8 +8,7 @@ import { addProject, getProjects } from '../lib/data';
 import { Project } from '@/types';
 
 const navItems = [
-  { href: '/', label: 'Dashboard', icon: '📊' },
-  { href: '/projects', label: 'Projects', icon: '🪦' },
+  { href: '/projects', label: 'Graveyard', icon: '🪦' },
 ];
 
 export default function Navigation() {
