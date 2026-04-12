@@ -73,12 +73,9 @@ export default function ProjectReport({ project, activityLogs, onClose }: Projec
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent rounded-t-lg"></div>
           
           <div className="absolute bottom-0 left-0 right-0 p-6 text-center">
-            <h2 className="text-3xl font-bold text-white mb-2 drop-shadow-lg">
+            <h2 className="text-3xl font-bold text-white drop-shadow-lg">
               {project.name}
             </h2>
-            <p className="text-gray-300 italic text-lg drop-shadow">
-              {generateEpitaph()}
-            </p>
           </div>
           
           <button
@@ -204,20 +201,10 @@ export default function ProjectReport({ project, activityLogs, onClose }: Projec
           )}
 
           {/* Actions */}
-          <div className="flex gap-4 pt-4 border-t border-gray-800">
-            {project.status === ProjectStatus.ABANDONED && (
-              <button className="flex-1 bg-purple-600 hover:bg-purple-700 text-white py-3 px-6 rounded-lg font-medium transition-colors border border-purple-500">
-                🔁 Attempt Resurrection
-              </button>
-            )}
-            
-            <button className="flex-1 bg-cyan-600 hover:bg-cyan-700 text-white py-3 px-6 rounded-lg font-medium transition-colors border border-cyan-500">
-              Edit Epitaph
-            </button>
-            
+          <div className="pt-4 border-t border-gray-800">
             <button
               onClick={onClose}
-              className="flex-1 bg-gray-700 hover:bg-gray-600 text-white py-3 px-6 rounded-lg font-medium transition-colors"
+              className="w-full bg-gray-700 hover:bg-gray-600 text-white py-3 px-6 rounded-lg font-medium transition-colors"
             >
               Close Report
             </button>
