@@ -17,7 +17,21 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-geist-sans), system-ui, -apple-system, sans-serif;
+  font-family: 'Chelsea Market', 'Comic Sans MS', cursive, sans-serif;
+}
+
+/* Custom font classes */
+.font-chelsea-market {
+  font-family: 'Chelsea Market', 'Comic Sans MS', cursive, sans-serif;
+}
+
+.font-kranky {
+  font-family: 'Kranky', 'Comic Sans MS', cursive, sans-serif;
+}
+
+/* Force Chelsea Market on all text elements */
+h1, h2, h3, h4, h5, h6, p, span, div, button, a {
+  font-family: 'Chelsea Market', 'Comic Sans MS', cursive, sans-serif;
 }
 
 /* Cyberpunk glow effects */

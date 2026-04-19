@@ -68,14 +68,13 @@ export default function ProjectReport({ project, activityLogs, onClose }: Projec
             alt="Grave"
             fill
             sizes="100vw"
+            loading="eager"
             className="object-cover opacity-60 rounded-t-lg"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent rounded-t-lg"></div>
           
           <div className="absolute bottom-0 left-0 right-0 p-6 text-center">
-            <h2 className="text-3xl font-bold text-white drop-shadow-lg">
-              {project.name}
-            </h2>
+            <h2 className="text-xl font-bold text-white mb-1 font-chelsea-market">{project.name}</h2>
           </div>
           
           <button

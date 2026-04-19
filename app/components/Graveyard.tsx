@@ -61,8 +61,8 @@ export default function Graveyard({ projects, onGraveClick }: GraveyardProps) {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
       <div className="mb-8">
-        <h1 className="text-4xl font-bold text-cyan-400 mb-2">The Digital Boneyard</h1>
-        <p className="text-gray-400 text-lg">Where good code goes to die. Click any grave to read its epitaph.</p>
+        <h1 className="text-4xl font-bold text-cyan-400 mb-2 text-center font-chelsea-market">The Digital Boneyard</h1>
+        <p className="text-gray-400 text-center mb-8 font-chelsea-market">Where good code goes to die. Click any grave to read its epitaph.</p>
       </div>
 
       {/* Filters */}
@@ -151,6 +151,7 @@ export default function Graveyard({ projects, onGraveClick }: GraveyardProps) {
                     alt="Grave"
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    loading="eager"
                     className="object-cover"
                   />
                 </div>

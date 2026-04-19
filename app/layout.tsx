@@ -3,6 +3,18 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navigation from "./components/Navigation";
 
+const chelseaMarket = Geist({
+  variable: "--font-chelsea-market",
+  subsets: ["latin"],
+  weight: "400",
+});
+
+const kranky = Geist({
+  variable: "--font-kranky",
+  subsets: ["latin"],
+  weight: "400",
+});
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -32,6 +44,9 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link href="https://fonts.googleapis.com/css2?family=Chelsea+Market&family=Kranky&display=swap" rel="stylesheet" />
         <link rel="icon" href="/grave.png" sizes="any" />
         <link rel="icon" href="/grave.png" type="image/png" />
       </head>
